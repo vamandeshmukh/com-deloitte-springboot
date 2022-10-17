@@ -12,8 +12,6 @@ import com.deloitte.springboot.demo.service.EmployeeService;
 @RestController
 public class EmployeeController {
 
-//	EmployeeService empService = new EmployeeService();
-
 	@Autowired
 	EmployeeService empService;
 
@@ -28,7 +26,6 @@ public class EmployeeController {
 
 	@GetMapping("/get-alll-emps")
 	public List<Employee> getAllEmps() {
-		System.out.println("get-all-emps");
 		return empService.getAllEmployees();
 	}
 
