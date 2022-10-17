@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.deloitte.springboot.demo.model.Employee;
 import com.deloitte.springboot.demo.service.EmployeeService;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 
 // http://localhost:8082/swagger-ui/index.html
 
@@ -30,9 +30,9 @@ public class EmployeeController {
 		return empService.getEmployeeById(employeeId);
 	}
 
-//	http://localhost:8082/get-alll-emps
+//	http://localhost:8082/get-all-emps
 
-	@GetMapping("/get-alll-emps")
+	@GetMapping("/get-all-emps")
 	public List<Employee> getAllEmps() {
 		return empService.getAllEmployees();
 	}
@@ -41,6 +41,7 @@ public class EmployeeController {
 
 	@PostMapping("/add-emp")
 	public Employee addEmp(@RequestBody Employee employee) {
+		System.out.println("addEmp " + employee.toString());
 		return empService.addEmployee(employee);
 	}
 
