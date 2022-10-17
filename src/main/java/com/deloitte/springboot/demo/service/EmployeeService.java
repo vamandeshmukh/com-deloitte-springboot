@@ -15,7 +15,7 @@ public class EmployeeService {
 	@Autowired
 	EmployeeRepository empRepository;
 
-	public Employee getEmployeeById(int employeeId) {  
+	public Employee getEmployeeById(int employeeId) {
 		System.out.println("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
 		Employee emp = empOptional.get();
@@ -42,12 +42,6 @@ public class EmployeeService {
 		empRepository.deleteById(employeeId);
 		return null;
 	}
-
-	// addEmployee()
-
-//	updateEmployee()
-
-//	deleteEmployee()
 
 }
 
