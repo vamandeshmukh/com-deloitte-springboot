@@ -3,24 +3,27 @@ package com.deloitte.springboot.demo.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.deloitte.springboot.demo.model.Employee;
+import com.deloitte.springboot.demo.service.EmployeeService;
 
 @RestController
 public class EmployeeController {
 
-//	http://localhost:8082/emp
+	EmployeeService empService;
 
-	@RequestMapping("/emp")
-	public Employee getEmp() {
-		Employee emp = new Employee(101, "Sonu", 90000);
-		System.out.println(emp.toString());
-		return emp;
+//	http://localhost:8082/get-emp-by-id
+
+	@GetMapping("/get-emp-by-id")
+	public Employee getEmpById() {
+		return empService.getEmployeeById(101);
 	}
 
-	@RequestMapping("/emp-list")
+//	http://localhost:8082/emp-list
+
+	@GetMapping("/emp-list")
 	public List<Employee> getEmpList() {
 		List<Employee> empList = new ArrayList<>();
 		empList.add(new Employee(101, "Sonu", 90000));
