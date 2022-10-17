@@ -40,7 +40,7 @@ public class EmployeeService {
 	public Employee deleteEmployeeById(int employeeId) {
 		System.out.println("deleteEmployeeById " + employeeId);
 		empRepository.deleteById(employeeId);
-		return getEmployeeById(employeeId);
+		return null;
 	}
 
 	// addEmployee()
