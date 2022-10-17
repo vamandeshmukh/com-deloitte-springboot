@@ -33,4 +33,10 @@ public class EmployeeController {
 
 	// create other methods
 
+//	addEmp() 
+
+//	updateEmp()
+
+//	deleteEmp()
+
 }
