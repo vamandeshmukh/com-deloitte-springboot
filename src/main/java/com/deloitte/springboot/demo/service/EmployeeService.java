@@ -45,6 +45,9 @@ public class EmployeeService {
 		}
 	}
 
+	public List<Employee> getEmployeeByCity(String city) {
+		return null;
+	}
 	public Employee addEmployee(Employee employee) {
 		System.out.println("addEmployee " + employee.toString());
 		return empRepository.save(employee);
@@ -66,6 +69,7 @@ public class EmployeeService {
 	public List<Employee> getEmployeeBySalaryGreaterThan(double salary) {
 		return empRepository.findBySalaryGreaterThan(salary);
 	}
+
 
 }
 

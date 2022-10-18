@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -30,10 +32,14 @@ public class Employee {
 	@Column(name = "salary")
 	private double salary;
 
-	// aadhaarNumber 	
-	// dateOfBirth - 25 
-	// dateOfJoining -  3 
-	
+	@ManyToOne
+	@JoinColumn(name = "departmentId")
+	private Department department;
+
+	// aadhaarNumber
+	// dateOfBirth - 25
+	// dateOfJoining - 3
+
 	public Employee() {
 		super();
 	}
@@ -43,6 +49,14 @@ public class Employee {
 		this.employeeId = employeeId;
 		this.firstName = firstName;
 		this.salary = salary;
+	}
+
+	public Employee(int employeeId, String firstName, double salary, Department department) {
+		super();
+		this.employeeId = employeeId;
+		this.firstName = firstName;
+		this.salary = salary;
+		this.department = department;
 	}
 
 	public int getEmployeeId() {
@@ -69,9 +83,18 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", firstName=" + firstName + ", salary=" + salary + "]";
+		return "Employee [employeeId=" + employeeId + ", firstName=" + firstName + ", salary=" + salary
+				+ ", department=" + department + "]";
 	}
 
 }
