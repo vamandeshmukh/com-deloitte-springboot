@@ -1,5 +1,7 @@
 package com.deloitte.springboot.demo.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +17,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	// SELECT one - findById();
 	// SELECT all - findAll();
 	// No need to declare methods for these operations.
+
+//	public abstract returnType findByFieldName(Type fieldName);
+
+	public abstract List<Employee> findByFirstName(String firstName);
 
 	// for other business specific requirements, methods need to be declared here.
 	// read this doc for more -

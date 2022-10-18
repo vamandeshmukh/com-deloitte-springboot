@@ -15,6 +15,11 @@ public class EmployeeService {
 	@Autowired
 	EmployeeRepository empRepository;
 
+	public List<Employee> getAllEmployees() {
+		System.out.println("getAllEmployees");
+		return empRepository.findAll();
+	}
+
 	public Employee getEmployeeById(int employeeId) {
 		System.out.println("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
@@ -22,9 +27,10 @@ public class EmployeeService {
 		return emp;
 	}
 
-	public List<Employee> getAllEmployees() {
-		System.out.println("getAllEmployees");
-		return empRepository.findAll();
+	public List<Employee> getEmployeeByFirstName(String firstName) {
+		System.out.println("getEmployeeByFirstName " + firstName);
+		empRepository.findByFirstName(firstName);
+		return null;
 	}
 
 	public Employee addEmployee(Employee employee) {
