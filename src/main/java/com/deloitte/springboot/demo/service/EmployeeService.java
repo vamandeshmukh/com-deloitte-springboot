@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.deloitte.springboot.demo.exception.EmployeeNotFoundException;
 import com.deloitte.springboot.demo.model.Employee;
+import com.deloitte.springboot.demo.repository.DepartmentRepository;
 import com.deloitte.springboot.demo.repository.EmployeeRepository;
 
 @Service
@@ -15,6 +16,12 @@ public class EmployeeService {
 
 	@Autowired
 	EmployeeRepository empRepository;
+
+	@Autowired
+	DepartmentRepository depRepository;
+
+	@Autowired
+	DepartmentService depService;
 
 	public List<Employee> getAllEmployees() {
 		System.out.println("getAllEmployees");
@@ -48,8 +55,11 @@ public class EmployeeService {
 	public List<Employee> getEmployeeByCity(String city) {
 		return null;
 	}
+
 	public Employee addEmployee(Employee employee) {
 		System.out.println("addEmployee " + employee.toString());
+		if (null != employee.getDepartment())
+			depService.getDepartmentById(employee.getDepartment().getDepartmentId());
 		return empRepository.save(employee);
 	}
 
@@ -69,7 +79,6 @@ public class EmployeeService {
 	public List<Employee> getEmployeeBySalaryGreaterThan(double salary) {
 		return empRepository.findBySalaryGreaterThan(salary);
 	}
-
 
 }
 

@@ -23,6 +23,22 @@ import com.deloitte.springboot.demo.service.EmployeeService;
 
 // http://localhost:8082/swagger-ui/index.html
 
+// insert new employee with departmentId
+//{
+//	  "firstName": "Sonu",
+//	  "salary": 987777,
+//	  "department": {
+//	    "departmentId": 1002
+//	  }
+//	}
+//insert new employee without departmentId
+//	{
+//	  "firstName": "Sonu",
+//	  "salary": 987777,
+//	  "department": null
+//	}
+
+
 @RestController
 @RequestMapping("/emp")
 public class EmployeeController {
@@ -80,7 +96,7 @@ public class EmployeeController {
 		return response;
 	}
 
-	//	http://localhost:8082/emp/add-emp 
+	// http://localhost:8082/emp/add-emp
 
 	@PostMapping("/add-emp")
 	public ResponseEntity<Employee> addEmp(@Valid @RequestBody Employee employee) {
