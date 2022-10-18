@@ -55,6 +55,7 @@ public class EmployeeController {
 	public ResponseEntity<List<Employee>> getEmpByFirstName(@PathVariable(name = "firstName") String firstName) {
 		List<Employee> empList = empService.getEmployeeByFirstName(firstName);
 		HttpStatus status = HttpStatus.OK;
+		empList.forEach(e -> System.out.println(e.toString()));
 		ResponseEntity<List<Employee>> response = new ResponseEntity<List<Employee>>(empList, status);
 		return response;
 	}

@@ -29,8 +29,7 @@ public class EmployeeService {
 
 	public List<Employee> getEmployeeByFirstName(String firstName) {
 		System.out.println("getEmployeeByFirstName " + firstName);
-		empRepository.findByFirstName(firstName);
-		return null;
+		return empRepository.findByFirstName(firstName);
 	}
 
 	public Employee addEmployee(Employee employee) {
