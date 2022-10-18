@@ -20,17 +20,16 @@ public class EmployeeService {
 		return empRepository.findAll();
 	}
 
-	public Employee getEmployeeById(int employeeId) { // 
+	public Employee getEmployeeById(int employeeId) { //
 		System.out.println("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
-//		if () {
-//			
-//		}
-//		else {
-//			
-//		}
-		Employee emp = empOptional.get();
-		return emp;
+		if (empOptional.isPresent()) {
+			return empOptional.get();
+		} else {
+			String errorMessage = "Employee with eid " + employeeId + " not found.";
+			System.out.println(errorMessage);
+			throw new RuntimeException(errorMessage);
+		}
 	}
 
 	public List<Employee> getEmployeeByFirstName(String firstName) {
