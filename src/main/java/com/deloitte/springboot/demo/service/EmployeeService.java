@@ -3,6 +3,8 @@ package com.deloitte.springboot.demo.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,8 @@ import com.deloitte.springboot.demo.repository.EmployeeRepository;
 @Service
 public class EmployeeService {
 
+	private final Logger LOG = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	EmployeeRepository empRepository;
 
@@ -24,60 +28,61 @@ public class EmployeeService {
 	DepartmentService depService;
 
 	public List<Employee> getAllEmployees() {
-		System.out.println("getAllEmployees");
+		LOG.info("getAllEmployees");
 		return empRepository.findAll();
 	}
 
 	public Employee getEmployeeById(int employeeId) { //
-		System.out.println("getEmployeeById " + employeeId);
+		LOG.info("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
 		if (empOptional.isPresent()) {
 			return empOptional.get();
 		} else {
 			String errorMessage = "Employee with eid " + employeeId + " not found.";
-			System.out.println(errorMessage);
+			LOG.error(errorMessage);
 			throw new EmployeeNotFoundException(errorMessage);
 		}
 	}
 
 	public List<Employee> getEmployeeByFirstName(String firstName) {
-		System.out.println("getEmployeeByFirstName " + firstName);
+		LOG.info("getEmployeeByFirstName " + firstName);
 		List<Employee> empList = empRepository.findByFirstName(firstName);
 		if (!empList.isEmpty()) {
 			return empList;
 		} else {
 			String errorMessage = "Employee with name " + firstName + " not found.";
-			System.out.println(errorMessage);
+			LOG.error(errorMessage);
 			throw new EmployeeNotFoundException(errorMessage);
 		}
 	}
 
 	public List<Employee> getEmployeeByCity(String city) {
-		// logic
+		LOG.info(city); // logic
 		return empRepository.findByDepartment_City(city);
 	}
 
 	public Employee addEmployee(Employee employee) {
-		System.out.println("addEmployee " + employee.toString());
+		LOG.info("addEmployee " + employee.toString());
 		if (null != employee.getDepartment())
 			depService.getDepartmentById(employee.getDepartment().getDepartmentId());
 		return empRepository.save(employee);
 	}
 
 	public Employee updateEmployee(Employee employee) {
+		LOG.info("updateEmployee " + employee.toString());
 		this.getEmployeeById(employee.getEmployeeId());
-		System.out.println("updateEmployee " + employee.toString());
 		return empRepository.save(employee);
 	}
 
 	public Employee deleteEmployeeById(int employeeId) {
 		Employee emp = this.getEmployeeById(employeeId);
-		System.out.println("deleteEmployeeById " + employeeId);
+		LOG.info("deleteEmployeeById " + employeeId);
 		empRepository.deleteById(employeeId);
 		return emp;
 	}
 
 	public List<Employee> getEmployeeBySalaryGreaterThan(double salary) {
+		LOG.info(Double.toString(salary));
 		return empRepository.findBySalaryGreaterThan(salary);
 	}
 
