@@ -30,6 +30,10 @@ public class Employee {
 	@Column(name = "salary")
 	private double salary;
 
+	// aadhaarNumber 	
+	// dateOfBirth - 25 
+	// dateOfJoining -  3 
+	
 	public Employee() {
 		super();
 	}

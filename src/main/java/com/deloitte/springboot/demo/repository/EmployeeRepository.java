@@ -22,6 +22,14 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	public abstract List<Employee> findByFirstName(String firstName);
 
+	public abstract List<Employee> findByFirstNameIgnoreCase(String firstName);
+
+	public abstract List<Employee> findBySalaryGreaterThan(double salary);
+
+	public abstract List<Employee> findBySalaryLessThan(double salary);
+
+	public abstract List<Employee> findBySalaryBetween(double salary1, double salary2);
+
 	// for other business specific requirements, methods need to be declared here.
 	// read this doc for more -
 	// https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.core-concepts

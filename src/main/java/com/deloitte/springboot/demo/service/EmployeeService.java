@@ -20,9 +20,15 @@ public class EmployeeService {
 		return empRepository.findAll();
 	}
 
-	public Employee getEmployeeById(int employeeId) {
+	public Employee getEmployeeById(int employeeId) { // 
 		System.out.println("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
+//		if () {
+//			
+//		}
+//		else {
+//			
+//		}
 		Employee emp = empOptional.get();
 		return emp;
 	}
@@ -46,6 +52,11 @@ public class EmployeeService {
 		System.out.println("deleteEmployeeById " + employeeId);
 		empRepository.deleteById(employeeId);
 		return null;
+	}
+
+	public List<Employee> getEmployeeBySalaryGreaterThan(double salary) {
+		// TODO Auto-generated method stub
+		return empRepository.findBySalaryGreaterThan(salary);
 	}
 
 }

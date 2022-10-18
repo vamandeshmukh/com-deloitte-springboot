@@ -60,7 +60,17 @@ public class EmployeeController {
 		return response;
 	}
 
-//	http://localhost:8082/emp/add-emp 
+//	http://localhost:8082/emp/get-emp-by-salary-greater-than/101
+	@GetMapping("/get-emp-by-salary-greater-than/{salary}")
+	public ResponseEntity<List<Employee>> getEmpBySalaryGreaterThan(@PathVariable(name = "salary") double salary) {
+		List<Employee> empList = empService.getEmployeeBySalaryGreaterThan(salary);
+		HttpStatus status = HttpStatus.OK;
+		empList.forEach(e -> System.out.println(e.toString()));
+		ResponseEntity<List<Employee>> response = new ResponseEntity<List<Employee>>(empList, status);
+		return response;
+	}
+
+	//	http://localhost:8082/emp/add-emp 
 
 	@PostMapping("/add-emp")
 	public ResponseEntity<Employee> addEmp(@Valid @RequestBody Employee employee) {
