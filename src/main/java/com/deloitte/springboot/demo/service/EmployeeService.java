@@ -53,7 +53,8 @@ public class EmployeeService {
 	}
 
 	public List<Employee> getEmployeeByCity(String city) {
-		return null;
+		// logic
+		return empRepository.findByDepartment_City(city);
 	}
 
 	public Employee addEmployee(Employee employee) {

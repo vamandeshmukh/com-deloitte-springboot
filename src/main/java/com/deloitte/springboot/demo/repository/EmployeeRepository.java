@@ -30,6 +30,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	public abstract List<Employee> findBySalaryBetween(double salary1, double salary2);
 
+	public abstract List<Employee> findByDepartment_City(String city);
+
 	// for other business specific requirements, methods need to be declared here.
 	// read this doc for more -
 	// https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.core-concepts
