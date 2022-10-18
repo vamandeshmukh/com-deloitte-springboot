@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.deloitte.springboot.demo.exception.EmployeeNotFoundException;
 import com.deloitte.springboot.demo.model.Employee;
 import com.deloitte.springboot.demo.repository.EmployeeRepository;
 
@@ -23,12 +24,13 @@ public class EmployeeService {
 	public Employee getEmployeeById(int employeeId) { //
 		System.out.println("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
+
 		if (empOptional.isPresent()) {
 			return empOptional.get();
 		} else {
 			String errorMessage = "Employee with eid " + employeeId + " not found.";
 			System.out.println(errorMessage);
-			throw new RuntimeException(errorMessage);
+			throw new EmployeeNotFoundException(errorMessage);
 		}
 	}
 
