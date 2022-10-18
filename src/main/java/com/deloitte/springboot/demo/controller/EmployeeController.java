@@ -86,7 +86,7 @@ public class EmployeeController {
 		return response;
 	}
 
-//	http://localhost:8082/emp/get-emp-by-first-name/101
+//	http://localhost:8082/emp/get-emp-by-city/Hyderabad
 	@GetMapping("/get-emp-by-city/{city}")
 	public ResponseEntity<List<Employee>> getEmpByCity(@PathVariable(name = "city") String city) {
 		List<Employee> empList = empService.getEmployeeByCity(city);
