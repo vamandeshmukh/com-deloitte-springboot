@@ -24,7 +24,6 @@ public class EmployeeService {
 	public Employee getEmployeeById(int employeeId) { //
 		System.out.println("getEmployeeById " + employeeId);
 		Optional<Employee> empOptional = empRepository.findById(employeeId);
-
 		if (empOptional.isPresent()) {
 			return empOptional.get();
 		} else {
@@ -36,7 +35,14 @@ public class EmployeeService {
 
 	public List<Employee> getEmployeeByFirstName(String firstName) {
 		System.out.println("getEmployeeByFirstName " + firstName);
-		return empRepository.findByFirstName(firstName);
+		List<Employee> empList = empRepository.findByFirstName(firstName);
+		if (!empList.isEmpty()) {
+			return empList;
+		} else {
+			String errorMessage = "Employee with name " + firstName + " not found.";
+			System.out.println(errorMessage);
+			throw new EmployeeNotFoundException(errorMessage);
+		}
 	}
 
 	public Employee addEmployee(Employee employee) {
@@ -45,18 +51,19 @@ public class EmployeeService {
 	}
 
 	public Employee updateEmployee(Employee employee) {
+		this.getEmployeeById(employee.getEmployeeId());
 		System.out.println("updateEmployee " + employee.toString());
 		return empRepository.save(employee);
 	}
 
 	public Employee deleteEmployeeById(int employeeId) {
+		Employee emp = this.getEmployeeById(employeeId);
 		System.out.println("deleteEmployeeById " + employeeId);
 		empRepository.deleteById(employeeId);
-		return null;
+		return emp;
 	}
 
 	public List<Employee> getEmployeeBySalaryGreaterThan(double salary) {
-		// TODO Auto-generated method stub
 		return empRepository.findBySalaryGreaterThan(salary);
 	}
 
