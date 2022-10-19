@@ -35,3 +35,94 @@
 2022-10-19 09:53:43.624  INFO 6736 --- [http-nio-8082-exec-3] c.d.s.demo.service.EmployeeService       : getEmployeeById 112
 2022-10-19 09:55:01.561  INFO 6736 --- [http-nio-8082-exec-7] c.d.s.demo.service.EmployeeService       : getEmployeeById 111
 2022-10-19 09:55:11.850  INFO 6736 --- [http-nio-8082-exec-8] c.d.s.demo.service.EmployeeService       : Hyderabad
+2022-10-19 09:57:24.137  INFO 6736 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 17 class path changes (0 additions, 0 deletions, 17 modifications)
+2022-10-19 09:57:24.146  INFO 6736 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-19 09:57:24.147  INFO 6736 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-10-19 09:57:24.151  INFO 6736 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 09:57:24.153  INFO 6736 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-19 09:57:24.157  INFO 6736 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-19 09:57:24.186  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting
+2022-10-19 09:57:24.209  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting App using Java 17.0.3 on VAMUX with PID 6736 (D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot\target\classes started by DELL in D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot)
+2022-10-19 09:57:24.209  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : No active profile set, falling back to 1 default profile: "default"
+2022-10-19 09:57:24.320  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-19 09:57:24.330  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2022-10-19 09:57:24.389  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-10-19 09:57:24.390  INFO 6736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-19 09:57:24.390  INFO 6736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-19 09:57:24.406  INFO 6736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-19 09:57:24.406  INFO 6736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2022-10-19 09:57:24.429  INFO 6736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-19 09:57:24.431  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-10-19 09:57:24.441  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-10-19 09:57:24.442  INFO 6736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-19 09:57:24.483  INFO 6736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-19 09:57:24.483  INFO 6736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 09:57:24.553  WARN 6736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-19 09:57:24.861  INFO 6736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-19 09:57:24.868  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-10-19 09:57:24.870  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started App in 0.681 seconds (JVM running for 272.579)
+2022-10-19 09:57:24.872  INFO 6736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-19 09:57:24.872  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started
+2022-10-19 10:08:59.285  INFO 6736 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-10-19 10:08:59.293  INFO 6736 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-19 10:08:59.298  INFO 6736 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 10:08:59.299  INFO 6736 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-10-19 10:08:59.302  INFO 6736 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-10-19 10:08:59.333  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting
+2022-10-19 10:08:59.374  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting App using Java 17.0.3 on VAMUX with PID 6736 (D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot\target\classes started by DELL in D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot)
+2022-10-19 10:08:59.375  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : No active profile set, falling back to 1 default profile: "default"
+2022-10-19 10:08:59.509  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-19 10:08:59.516  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2022-10-19 10:08:59.587  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-10-19 10:08:59.588  INFO 6736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-19 10:08:59.588  INFO 6736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-19 10:08:59.612  INFO 6736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-19 10:08:59.612  INFO 6736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
+2022-10-19 10:08:59.645  INFO 6736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-19 10:08:59.649  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-10-19 10:08:59.664  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-10-19 10:08:59.665  INFO 6736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-19 10:08:59.721  INFO 6736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-19 10:08:59.722  INFO 6736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 10:08:59.853  WARN 6736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-19 10:09:07.667  INFO 6736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-19 10:09:07.705  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-10-19 10:09:07.713  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started App in 8.372 seconds (JVM running for 975.421)
+2022-10-19 10:09:07.716  INFO 6736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-19 10:09:07.716  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started
+2022-10-19 10:09:09.108  INFO 6736 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-10-19 10:09:09.130  INFO 6736 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-19 10:09:09.139  INFO 6736 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 10:09:09.140  INFO 6736 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-10-19 10:09:09.153  INFO 6736 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-10-19 10:09:09.194  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting
+2022-10-19 10:09:09.244  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting App using Java 17.0.3 on VAMUX with PID 6736 (D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot\target\classes started by DELL in D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot)
+2022-10-19 10:09:09.245  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : No active profile set, falling back to 1 default profile: "default"
+2022-10-19 10:09:09.650  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-19 10:09:09.674  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2022-10-19 10:09:09.923  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-10-19 10:09:09.926  INFO 6736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-19 10:09:09.927  INFO 6736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-19 10:09:09.975  INFO 6736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-19 10:09:09.976  INFO 6736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
+2022-10-19 10:09:10.037  INFO 6736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-19 10:09:10.055  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-10-19 10:09:10.074  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-10-19 10:09:10.074  INFO 6736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-19 10:09:10.147  INFO 6736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-19 10:09:10.147  INFO 6736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 10:09:10.400  WARN 6736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-19 10:09:11.128  INFO 6736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-19 10:09:11.154  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-10-19 10:09:11.160  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started App in 1.951 seconds (JVM running for 978.868)
+2022-10-19 10:09:11.166  INFO 6736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-19 10:09:11.168  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started
+2022-10-19 10:48:29.450  INFO 6736 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-19 10:48:29.452  INFO 6736 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-19 10:48:29.453  INFO 6736 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-19 10:48:29.460  INFO 6736 --- [http-nio-8082-exec-1] c.d.s.demo.service.EmployeeService       : getEmployeeById 101
+2022-10-19 10:48:36.230  INFO 6736 --- [http-nio-8082-exec-3] c.d.s.demo.service.EmployeeService       : getEmployeeById 111
+2022-10-19 10:48:41.334  INFO 6736 --- [http-nio-8082-exec-4] c.d.s.demo.service.EmployeeService       : getEmployeeById 112
+2022-10-19 10:49:13.281  INFO 6736 --- [http-nio-8082-exec-5] c.d.s.demo.service.EmployeeService       : getEmployeeById 112
+2022-10-19 11:07:42.940  INFO 6736 --- [http-nio-8082-exec-8] c.d.s.demo.service.EmployeeService       : getEmployeeById 112
+2022-10-19 11:07:44.777  INFO 6736 --- [http-nio-8082-exec-9] c.d.s.demo.service.EmployeeService       : getEmployeeById 112
