@@ -1,0 +1,37 @@
+2022-10-19 09:52:53.372  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Starting App using Java 17.0.3 on VAMUX with PID 6736 (D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot\target\classes started by DELL in D:\VamanPro\Codes\STS_WS\STS_Deloitte\com-deloitte-springboot)
+2022-10-19 09:52:53.374  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : No active profile set, falling back to 1 default profile: "default"
+2022-10-19 09:52:53.416  INFO 6736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-19 09:52:53.416  INFO 6736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-19 09:52:53.886  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-19 09:52:53.932  INFO 6736 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2022-10-19 09:52:54.335  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-10-19 09:52:54.342  INFO 6736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-19 09:52:54.342  INFO 6736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-19 09:52:54.637  INFO 6736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-19 09:52:54.637  INFO 6736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1218 ms
+2022-10-19 09:52:54.722  INFO 6736 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-19 09:52:54.755  INFO 6736 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-19 09:52:54.858  INFO 6736 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-19 09:52:54.924  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-19 09:52:55.155  INFO 6736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-19 09:52:55.174  INFO 6736 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-19 09:52:55.656  INFO 6736 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-19 09:52:55.663  INFO 6736 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 09:52:55.972  WARN 6736 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-19 09:52:56.551  INFO 6736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-19 09:52:56.582  INFO 6736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-10-19 09:52:56.588  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started App in 3.476 seconds (JVM running for 4.296)
+2022-10-19 09:52:56.590  INFO 6736 --- [restartedMain] com.deloitte.springboot.demo.App         : Started
+2022-10-19 09:53:06.119  INFO 6736 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-19 09:53:06.120  INFO 6736 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-19 09:53:06.121  INFO 6736 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-19 09:53:06.209  INFO 6736 --- [http-nio-8082-exec-2] c.d.s.demo.service.EmployeeService       : addEmployee Employee [employeeId=0, firstName=Sonu, salary=787878.0, department=Department [departmentId=90, departmentName=null, city=null]]
+2022-10-19 09:53:06.246  WARN 6736 --- [http-nio-8082-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.deloitte.springboot.demo.exception.DepartmentNotFoundException: Department with did 90 not found.]
+2022-10-19 09:53:14.079  INFO 6736 --- [http-nio-8082-exec-1] c.d.s.demo.service.EmployeeService       : addEmployee Employee [employeeId=0, firstName=Sonu, salary=787878.0, department=Department [departmentId=1002, departmentName=null, city=null]]
+2022-10-19 09:53:27.855  INFO 6736 --- [http-nio-8082-exec-4] c.d.s.demo.service.EmployeeService       : addEmployee Employee [employeeId=0, firstName=Monu, salary=787878.0, department=null]
+2022-10-19 09:53:37.059  INFO 6736 --- [http-nio-8082-exec-5] c.d.s.demo.service.EmployeeService       : getEmployeeById 12345
+2022-10-19 09:53:37.064 ERROR 6736 --- [http-nio-8082-exec-5] c.d.s.demo.service.EmployeeService       : Employee with eid 12345 not found.
+2022-10-19 09:53:37.065  WARN 6736 --- [http-nio-8082-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.deloitte.springboot.demo.exception.EmployeeNotFoundException: Employee with eid 12345 not found.]
+2022-10-19 09:53:43.624  INFO 6736 --- [http-nio-8082-exec-3] c.d.s.demo.service.EmployeeService       : getEmployeeById 112
+2022-10-19 09:55:01.561  INFO 6736 --- [http-nio-8082-exec-7] c.d.s.demo.service.EmployeeService       : getEmployeeById 111
+2022-10-19 09:55:11.850  INFO 6736 --- [http-nio-8082-exec-8] c.d.s.demo.service.EmployeeService       : Hyderabad
