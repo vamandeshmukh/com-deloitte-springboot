@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,6 +42,7 @@ import com.deloitte.springboot.demo.service.EmployeeService;
 
 @RestController
 @RequestMapping("/emp")
+@CrossOrigin(origins = "*")
 public class EmployeeController {
 
 	@Autowired
@@ -107,8 +109,10 @@ public class EmployeeController {
 		ResponseEntity<Employee> response = new ResponseEntity<>(emp, headers, status);
 		return response;
 	}
+	
+	// endpoint / API 
 
-//	http://localhost:8082/emp/update-emp 
+//	URL / URI / Link : http://localhost:8082/emp/update-emp 
 
 	@PutMapping("/update-emp")
 	public ResponseEntity<Employee> updateEmp(@Valid @RequestBody Employee employee) {
